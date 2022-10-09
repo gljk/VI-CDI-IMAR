@@ -14,8 +14,8 @@ IMdekom$Uzrok <- factor(IMdekom$Uzrok, levels=c("Kardiovaskularni","Tumori", "Re
 IMplotgg<- ggplot(IMdekom, aes(fill = Uzrok, y = Doprinos, x = Starost)) +
   geom_bar(position = "stack", stat = "identity") +
   geom_line(aes(x=Starost,y=Ukupno, group=1),col="#4daf4a",size=0.5, linetype=1) +
-  coord_flip() +
-  facet_wrap(~ Pol, nrow = 1, ncol = 2) + theme_minimal() + theme(legend.position = "bottom") +
+  #coord_flip() +
+  facet_wrap(~ Pol, nrow = 2, ncol = 1) + theme_minimal() + theme(legend.position = "bottom") +
   xlab(NULL) + ylab(NULL) + scale_fill_manual(values = c("#de2d26", "#636363" ,"#386CB0", "#FDC086","#BF5B17", "#80B1D3", "#FCCDE5", "#8DD3C7" ))+
   scale_y_continuous(breaks = (seq(-0.3, 1, 0.3)))
 
