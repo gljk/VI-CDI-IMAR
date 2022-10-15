@@ -25,6 +25,6 @@ IMplotly<- ggplotly(IMplotgg)
 IMplotly$x$data[[31]]$text <- IMplotly$x$data[[31]]$text %>%  gsub(pattern = "<br />Ukupno", replacement = " je doprinela porastu OTŽ za ") %>%  gsub(pattern = "<br />Uzrok: Ostali", replacement = "")
 IMplotly$x$data[[32]]$text <- IMplotly$x$data[[32]]$text %>%  gsub(pattern = "<br />Ukupno", replacement = " je doprinela porastu OTŽ za ") %>%  gsub(pattern = "<br />Uzrok: Ostali", replacement = "")
 IMplotly<- IMplotly %>% 
-add_trace(x=0, y=0, marker = list(symbol="circle",color= '#4daf4a', width=1.5, opacity= 0),showlegend=T, name="Ukupan doprinos")
+add_trace(x=0, y=0, marker = list(symbol="circle",color= '#4daf4a', width=1.5, opacity= 0),showlegend=T, name="Ukupan doprinos") %>% layout(separators=".,")
 
 IMplotly
